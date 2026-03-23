@@ -1,0 +1,407 @@
+* { margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1e3932;
+    padding-bottom: 110px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main {
+    width: 100%;
+}
+
+/* Colores de mi Starbucks */
+.bg-light-green { background-color: #f7f0e4; color: #1e3932; }
+.bg-lavender { background-color: #d1d1aa; color: #1e3932; }
+.bg-dark-green { background-color: #00754a; color: white; }
+.bg-green { background-color: #00754a; color: #ffffff;}
+.bg-beige { background-color: #32462f; color: #d1d1aa;}
+.text-white { color: #ffffff; }
+
+.text-green { color: #1e3932; }
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Separa logo, links y botones */
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+.logo img{
+    width:50px;
+    height:auto;
+    display:flex;
+    align-items:center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espacio entre elementos del menú */
+    align-items: center;
+}
+
+.nav-links li {
+   font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000; 
+}
+
+.nav-auth {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Botones en Navbar*/
+.btn-login, .btn-join {
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-login { background-color: white; border-color: black; color: black; }
+
+.btn-login:hover { background-color: #f7f7f7; }
+
+.btn-join { background-color: black; color: white; border-color: black; }
+
+.btn-join:hover { background-color: #333; }
+
+/* Tarjetas grandes */
+.card {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 32px;
+    min-height: 500px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+/* Tarjeta (Lavanda) */
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Ajuste de las columnas */
+.card-image, .card-text {
+    flex: 1; 
+    width: 50%;
+}
+
+/* Estilo imágenes */
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 48px;
+}
+
+/* Tipografía de los títulos */
+.card-text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.card-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 540px;
+    margin-bottom: 24px;
+}
+
+
+/* Botones de las tarjetas */
+.btn-outline, .btn-outline-white, .btn-outline-white-round, .btn-outline-green-round {
+    background: transparent;
+    padding: 8px 18px;
+    border-radius: 999px; /* Esto les da la forma de cápsula */
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* Botón verde/oscuro */
+.btn-outline { border: 1px solid #1e3932; color: #1e3932;}
+
+.btn-outline:hover { background-color: rgba(30, 57, 50, 0.08); }
+
+/* Botón blanco */
+.btn-outline-white,
+.btn-outline-white-round { border: 1px solid #ffffff; color: #ffffff;
+}
+
+.btn-outline-white:hover,
+.btn-outline-white-round:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+/* Botón verde en fondo claro */
+.btn-outline-green-round { border: 1px solid #1e3932; color: #1e3932; }
+
+.btn-outline-green-round:hover { background-color: rgba(30, 57, 50, 0.08); }
+
+/*Tarjetas pequeñas*/
+
+.cards-grid-container {
+    display: flex;
+    width: 100%;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.grid-card {
+    flex: 1;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+}
+
+.grid-card-news {
+    background-color: #00754a;
+    color: #f3eadb;
+}
+
+.grid-card-promo {
+    background-color: #ece6d8;
+    color: #00754a;
+}
+
+.grid-card-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-card-frame {
+    width: 100%;
+    border: 8px solid currentColor;
+    padding: 60px 30px;
+    margin-bottom: 40px;
+}
+
+.grid-card-frame h2 {
+    font-size: 48px;
+    line-height: 1;
+    margin: 0;
+}
+
+.grid-card-inner p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 320px;
+    margin-bottom: 24px;
+}
+
+/*Ajustes*/
+
+.card-reusable .card-text { padding: 48px;}
+
+/*Responsivo*/
+
+@media (max-width: 900px) {
+    .navbar {flex-direction: column;gap: 18px;}
+    .nav-links {flex-wrap: wrap; justify-content: center;}
+    .card,.row-reverse { flex-direction: column;}
+    .card-image,.card-text {width: 100%;}
+    .card-text {padding: 32px 24px;}
+    .card-text h2 {font-size: 30px;}
+    .card-text p {font-size: 18px;}
+    .cards-grid-container { flex-direction: column; gap: 24px;}
+}
+
+/* FOOTER */
+
+.main-footer {
+    padding: 48px 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nivel 1: Columnas */
+.footer-links {
+    display: flex;
+    gap: 100px; /* Espacio entre columnas */
+    margin-bottom: 32px;
+}
+
+.footer-column h3 {
+    font-size: 19px;
+    margin-bottom: 24px;
+    color: #000;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 16px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.58); /* Gris típico de Starbucks */
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+/* Divisor */
+.footer-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 32px 0;
+}
+
+/* Nivel 2: Redes Sociales */
+.footer-social {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.social-icons .icon {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 44px;
+    height: 44px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+.social-icons .icon:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 6px rgba(0,0,0,0.08);
+}
+
+/* Nivel 3: Legal */
+.footer-legal .legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.footer-legal .legal-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-legal .legal-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 14px;
+    color: rgba(0,0,0,0.58);
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    .footer-links {flex-direction: column; gap: 30px; }
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-top: 1px solid #d9d9d9;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.cookie-text strong {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+.cookie-text p {
+    font-size: 15px;
+    color: #222;
+    margin: 0;
+}
+
+.cookie-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cookie-btn:hover {
+    background-color: #222;
+}
